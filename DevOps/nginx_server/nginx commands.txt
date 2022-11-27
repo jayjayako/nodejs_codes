@@ -1,0 +1,4 @@
+//nginx commands
+start nginx
+nginx.exe -s quit
+nginx -s reload

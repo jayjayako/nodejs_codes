@@ -1,0 +1,22 @@
+<div class="fullwidth fullheight">
+  <div class="flexbox">
+    <h2 class="fullwidth textaligncenter">Dashboard</h2>
+    <h2 class="textalignleft fullwidth" id="titleid">
+      Welcome ${myresult[0].name}
+    </h2>
+    <div class="dashboard-content1">
+      <button onclick="logout()" class="button1">Logout</button>
+    </div>
+  </div>
+  <div class="flexbox">
+    <div class="dashboard-content2">
+      <button onclick="sendrealtime()" class="button1">Send Socket</button>
+    </div>
+    <div class="dashboard-content2">
+      <input type="file" id="file1" />
+    </div>
+    <div class="dashboard-content2">
+      <button onclick="uploadfile()" class="button1">Upload the file</button>
+    </div>
+  </div>
+</div>

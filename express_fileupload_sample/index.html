@@ -1,0 +1,32 @@
+<h1>Advanced File Upload</h1>
+<form onsubmit="return false">
+  <input type="text" id="filename" />
+  <input type="file" id="filedata" />
+  <input type="submit" value="Upload" onclick="uploadfile()" />
+</form>
+<button onclick="uploadfiletest()">Test</button>
+
+<script>
+  async function uploadfile() {
+    let filename = document.getElementById("filename").value;
+    let filedata = document.getElementById("filedata");
+    let formData = new FormData();
+    formData.append("filename", filename);
+    formData.append("filedata", filedata.files[0]);
+    let response = await fetch("/", {
+      method: "POST",
+      body: formData,
+    });
+    let myresult = await response.json();
+    if (myresult[0].data == "success") {
+      alert("file upload success");
+    } else if (myresult[0].data == "invalid") {
+      alert("Invalid");
+    }
+  }
+
+  async function uploadfiletest() {
+    uploadfile();
+    uploadfile();
+  }
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table id="fuckingtbl">
+<tr id="1"><td id="1">F</td></tr>
+<tr id="2"><td>F</td></tr>
+<tr id="3"><td>F</td></tr>
+<tr id="4"><td>F</td></tr>
+<tr id="5"><td id="5woah">F</td></tr>
+</table>
+
+<script>
+var table=document.getElementById("fuckingtbl");
+var firstRow= table.rows[ 1-1 ];
+var lastRow= table.rows[ table.rows.length - 1 ];
+var innertdid=lastRow.getElementsByTagName("td");
+alert(lastRow.id+" "+firstRow.id+" "+innertdid[0].id);
+</script>
+
+</body>
+</html>
+
+
+/// this will access ids of queried table

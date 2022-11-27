@@ -1,0 +1,2 @@
+//  this is for combining react and node express server
+"start": "concurrently \"cd ./server && npm run start\" \"cd ./client && npm run dev\""

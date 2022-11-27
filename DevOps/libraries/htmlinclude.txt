@@ -1,0 +1,9 @@
+// dont use a tag when navigating inside a single page
+// use a tag only when go to another html index of another page
+// this library is used for building single page application
+// always include the library on top then inside the html file include it also before
+// the design markup
+// js and css only works when imported only from another file
+// in css it works either direct style example
+// <p style or css import by js
+// when display flex be careful you must create another div outside to prevent

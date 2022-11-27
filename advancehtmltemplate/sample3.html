@@ -1,0 +1,80 @@
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fullwidth {
+    width: 100%;
+  }
+  .fullheight {
+    height: 100%;
+  }
+  .mainpage {
+    display: grid;
+    background-color: #2196f3;
+    grid-template-columns: 20% auto;
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .gridcont {
+    background-color: transparent;
+  }
+
+  .gridpage2 {
+    display: grid;
+    background-color: #2196f3;
+    grid-template-rows: 20% auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .gridcont2 {
+    text-align: center;
+    padding: 2px;
+    font-size: 20px;
+    background-color: white;
+  }
+
+  .sidebarnavdes {
+    grid-column: 1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    font-size: 20px;
+  }
+  .bodynav {
+    grid-column: 2;
+  }
+  .headernav {
+    grid-row: 1;
+    border-radius: 10px;
+  }
+  .headernav2 {
+    grid-row: 2;
+    border-radius: 10px;
+  }
+  .bodycontent {
+    grid-row: 3;
+    border-radius: 10px;
+  }
+</style>
+<div class="mainpage fullwidth fullheight">
+  <div class="fullwidth fullheight gridcont sidebarnavdes flexbox">
+    this is side nav
+  </div>
+  <div class="fullwidth fullheight gridcont bodynav">
+    <div class="fullwidth fullheight gridpage2">
+      <div class="gridcont2 headernav flexbox">this is header 1</div>
+      <div class="gridcont2 headernav2 flexbox">this is header 2</div>
+      <div class="gridcont2 bodycontent flexbox">this is content</div>
+    </div>
+  </div>
+</div>

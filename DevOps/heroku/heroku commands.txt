@@ -1,0 +1,23 @@
+heroku git:clone -a <app name> => used to download before updating
+heroku app
+ex.
+heroku git:clone -a hidden-cliffs-41232
+
+///// used to update heroku apps //////
+git add .
+git commit -am "yourname" ex. git commit -am "Arturo"
+git push heroku master
+///////////////////////////////////////
+
+////////////// used to pull if not setup ///////
+git pull https://git.heroku.com/appname.git
+////////////////////////////////////////////////
+
+/////////////// used to see logs from app heroku /////
+heroku logs --tail
+//////////////////////////////////////////////////////
+
+/////////////// used to restart app in heroku /////////
+heroku restart -a appname
+///////////////////////////////////////////////////////
+

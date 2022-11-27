@@ -1,0 +1,294 @@
+/*///////////// button design ////////////*/
+.btndes1 {
+  border: none;
+  border-radius: 10px;
+  width: 198px;
+  height: 35px;
+  background-color: #833db0;
+  color: white;
+  transition: 0.5s;
+}
+
+.btndes1:hover {
+  opacity: 0.9;
+}
+
+.btndes2 {
+  border: none;
+  border-radius: 10px;
+  width: 198px;
+  height: 35px;
+  background-color: #57cbb4;
+  color: white;
+  transition: 0.5s;
+}
+
+.btndes2:hover {
+  opacity: 0.9;
+}
+
+.btndes3 {
+  border-radius: 5px;
+  border: none;
+  width: 198px;
+  height: 35px;
+  background-color: #525252;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btndes3:hover {
+  opacity: 0.9;
+}
+
+.btndes4 {
+  border-radius: 5px;
+  width: 198px;
+  height: 35px;
+  border: 1px solid #833db0;
+  background-color: transparent;
+  color: #833db0;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btndes4:hover {
+  background-color: #dab6f0;
+}
+
+.btndes5 {
+  border-radius: 5px;
+  width: 198px;
+  height: 35px;
+  border: 1px solid #57cbb4;
+  background-color: transparent;
+  color: #57cbb4;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btndes5:hover {
+  background-color: #d1fff6;
+}
+/* ////////////////////////////////////// */
+
+/* //////////// input design //////////// */
+.inputtextdes1 {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  transition: 0.5s;
+  background-color: rgb(221, 221, 221);
+}
+
+.inputtextdes1:focus {
+  outline: none;
+  background-color: rgb(230, 220, 220);
+}
+
+.inputpassdes1 {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  transition: 0.5s;
+  background-color: rgb(221, 221, 221);
+}
+
+.inputpassdes1:focus {
+  outline: none;
+  background-color: rgb(230, 220, 220);
+}
+
+.inputtextdes2 {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #525252;
+  transition: 0.5s;
+}
+
+.inputtextdes2:focus {
+  border: 1px solid #57cbb4;
+}
+
+.inputpassdes2 {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #525252;
+  transition: 0.5s;
+}
+
+.inputpassdes2:focus {
+  border: 1px solid #57cbb4;
+}
+/* /////////////////////////////////// */
+
+/* //////////// link design ////////// */
+.linkdes1 {
+  background-color: none;
+  text-decoration: none;
+  color: #444444;
+}
+/* /////////////////////////////////// */
+
+/* ////////// dropdown design //////// */
+.dropdowndes1 {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  transition: 0.5s;
+  background-color: rgb(221, 221, 221);
+}
+.dropdowndes1:focus {
+  outline: none;
+  background-color: rgb(230, 220, 220);
+}
+/* /////////////////////////////////// */
+
+/* /////////// table design ////////// */
+.tbldes1 {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100px;
+}
+
+.tbldes1 th,
+td {
+  text-align: left;
+  padding: 10px 10px;
+}
+
+.outertbl1 {
+  overflow-x: auto;
+  /* height: 200px; */
+  height: 100%;
+}
+
+.outer2tbl1 {
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.outertbl1 th {
+  text-align: left;
+  top: 0;
+  position: sticky;
+  background-color: #57cbb4;
+  width: 100%;
+  padding: 10px 10px;
+  color: white;
+  font-family: Telegrafultrabold;
+}
+
+.tbldes1 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+/* /////////////////////////////////// */
+/* //////////// card design ////////// */
+.carddes {
+  width: 250px;
+  height: 95px;
+  box-shadow: 1px 2px 4px rgb(207, 207, 207);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.cardcontaindes {
+  display: grid;
+  grid-template-columns: 3% 97%;
+  width: 100%;
+  height: 100%;
+}
+
+.cardstrip {
+  background-color: var(--violet);
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.cardcontentdes {
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.carddes:hover {
+  opacity: 0.5;
+}
+/* /////////////////////////////////// */
+/* //// super admin stats card des //// */
+.spradcarddes {
+  width: 100%;
+  height: 148px;
+  box-shadow: 1px 2px 4px rgb(207, 207, 207);
+  border-radius: 10px;
+}
+.spradcardcountdes {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid var(--blueGreen);
+}
+.spradcardcountdes p {
+  font-size: 28px;
+  font-weight: bold;
+}
+.dropdowndes2 {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  color: var(--violet);
+  outline: none;
+  text-align: right;
+}
+.dropdowndes2 option {
+  color: var(--violet);
+  outline: none;
+  text-align: right;
+}
+.drpdwn2padder {
+  padding: 20px;
+}
+/* /////////////////////////////////// */
+/* ////////// notif dot design /////// */
+.notifdot {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  font-family: Arial;
+  color: white;
+  padding: 1px;
+}
+/* /////////////////////////////////// */
+/* ////////////// tab des 1 ////////// */
+.tabdes1 {
+  background-color: aquamarine;
+}
+.radiobtn1 {
+  display: none;
+}
+.radiobtn1:checked + .tabdes1 {
+  background-color: rgb(7, 214, 145);
+}
+/* /////////////////////////////////// */

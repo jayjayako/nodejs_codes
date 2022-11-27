@@ -1,0 +1,71 @@
+@font-face {
+  font-family: Telegrafregular;
+  src: url("./fonts/Telegraf Regular 400.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Telegrafultrabold;
+  src: url("./fonts/Telegraf UltraBold 800.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Telegrafultralight;
+  src: url("./fonts/Telegraf UltraLight 200.otf") format("opentype");
+}
+
+* {
+  font-family: Telegrafregular;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #5e5e5e;
+  --violet: #833db0;
+  --lightBlue: #e8f3f1;
+  --blueGreen: #57cbb4;
+  --darkGreen: #00392a;
+  --lightViolet: #dcc9e9;
+  --grayViolet: #f6f6f6;
+}
+
+.fullwidth {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.fullheight {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.fullheightvh {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexcontent {
+  display: block;
+}
+
+.flexdirec-col {
+  flex-direction: column;
+}
+.flexdirec-row {
+  flex-direction: row;
+}
+
+.padder {
+  padding: 10px;
+}
+
+.outer3tbl1 {
+  height: 35%;
+}

@@ -1,0 +1,1 @@
+pscp -l root -P 2200 samplefile.txt root@localhost:/root

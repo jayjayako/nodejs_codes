@@ -1,0 +1,6 @@
+// first create frontend folder and backend folder
+// frontend folder must have vite or react app installed
+// backend folder must have node js express installed
+// then the outer main folder have concurrently installed
+// connect frontend backend whether it is running on dev it will connect each other using concurrently
+// when the app is finished you must npm run build the frontend to become static file to deploy to node server

@@ -1,0 +1,7 @@
+git clone "your created repo"
+
+git status "to know status"
+
+git add .
+git commit -m "MY MESSAGE HERE"
+git push

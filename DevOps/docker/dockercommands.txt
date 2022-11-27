@@ -1,0 +1,23 @@
+// use to build image
+docker build -t <yourappname> .
+//running using port
+docker run -it -d -p 3000:3000 --name advancedserverjj <imagename>
+// for entering inside a dockerize os
+docker exec -it <nameofimage> bash
+// exiting docker os
+exit
+
+// for docker mysql
+docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+
+// for docker compose
+docker compose up
+docker compose down
+// remove all stopped container
+docker rm -vf $(docker ps -aq)
+// remove all images
+docker rmi -f $(docker images -aq)
+// to create new volume mysql
+docker volume create --name=mysql
+// remove all
+docker system prune --volumes

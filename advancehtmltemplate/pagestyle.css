@@ -1,0 +1,26 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexcontent {
+  display: flex;
+  justify-content: center;
+}
+
+.fullwidth {
+  width: 100%;
+}
+.fullheight {
+  height: 100%;
+}
+
+.displaygrid {
+  display: grid;
+}

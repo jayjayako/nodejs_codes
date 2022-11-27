@@ -1,0 +1,27 @@
+.gridtransparent {
+  background-color: transparent;
+}
+
+.header {
+  background-color: #2196f3;
+  grid-template-rows: 20% auto;
+  gap: 10px;
+  padding: 10px;
+  grid-column: 1;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: white;
+  font-size: 20px;
+}
+
+.footer {
+  background-color: #2196f3;
+  grid-template-rows: 20% auto;
+  gap: 10px;
+  padding: 10px;
+  grid-column: 1;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: white;
+  font-size: 20px;
+}

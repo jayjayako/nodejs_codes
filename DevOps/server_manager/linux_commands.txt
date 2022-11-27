@@ -1,0 +1,25 @@
+///// server user and pass
+arturojj
+keepsecret
+
+ifconfig first and get ipaddress
+
+pwd absolute command
+ls
+cd
+mkdir
+touch filename
+rm filename
+cp copy
+mv move
+nano
+sudo
+zip
+unzip
+apt-get
+chmod
+chmod +x numbers.py
+chmod 755 numbers.py
+sudo chmod +x numbers.py
+hostname know ipaddress
+ping
