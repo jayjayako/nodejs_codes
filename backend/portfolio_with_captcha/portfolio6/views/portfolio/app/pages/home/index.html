@@ -1,0 +1,238 @@
+<style>
+  .homegrid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0px;
+    margin: 30px;
+  }
+
+  .homegrid-container > div {
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .homeitem1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .homeitem2 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .homeimg1 {
+    width: 300px;
+    height: auto;
+  }
+
+  .burgermenubtn {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .homeitem1 {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+    .homeitem2 {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+    .homeimg1 {
+      width: 250px;
+      height: auto;
+    }
+    .header1cont {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 850px) {
+    .burgermenubtn {
+      display: none;
+    }
+  }
+  .header1cont {
+    margin-top: 20px;
+    height: 50px;
+  }
+  .header1 {
+    background-color: transparent;
+    border: 5px solid;
+    width: 80%;
+  }
+  .hometext {
+    color: white;
+    text-align: left;
+    font-family: CourierPrimeRegular;
+    /* font-family: "Incosolata", Consolas, monospace; */
+  }
+  #job {
+    color: rgb(255, 111, 111);
+    position: relative;
+  }
+  .navbtn {
+    width: 150px;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+    text-underline-offset: 10px;
+  }
+  .navbtn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  #typingcursor {
+    background: white;
+    line-height: 17px;
+    margin-left: 3px;
+    width: 15px;
+    height: 2px;
+    margin-top: 23px;
+  }
+  #cursor {
+    background: white;
+    line-height: 17px;
+    margin-left: 3px;
+    -webkit-animation: blink 0.9s infinite;
+    width: 15px;
+    height: 2px;
+    margin-top: 23px;
+  }
+  @-webkit-keyframes blink {
+    0% {
+      background: #222;
+    }
+    50% {
+      background: white;
+    }
+    100% {
+      background: #222;
+    }
+  }
+  /*//////////// for burger menu ///////////*/
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #808080;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  /* ////////////////////////////////// */
+</style>
+<!-- //////////// for burger menu /////////// -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#" style="color: #808080">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#services">Services</a>
+    <a href="#contactus">Contact Us</a>
+  </div>
+</div>
+<span
+  class="burgermenubtn"
+  style="font-size: 30px; cursor: pointer; color: white"
+  onclick="openNav()"
+  >&#9776;</span
+>
+<!-- //////////////////////////////////////// -->
+<div class="header1cont fullwidth flexbox">
+  <div class="header1 fullheight flexbox">
+    <div
+      class="navbtn flexbox fullheight"
+      style="background-color: white; color: black; border-radius: 20px">
+      Home
+    </div>
+    <div class="navbtn flexbox fullheight" onclick="location.href='#about'">
+      About
+    </div>
+    <div class="navbtn flexbox fullheight" onclick="location.href='#skills'">
+      Skills
+    </div>
+    <div class="navbtn flexbox fullheight" onclick="location.href='#projects'">
+      Projects
+    </div>
+    <div class="navbtn flexbox fullheight" onclick="location.href='#resume'">
+      Resume
+    </div>
+    <div class="navbtn flexbox fullheight" onclick="location.href='#services'">
+      Services
+    </div>
+    <div class="navbtn flexbox fullheight" onclick="location.href='#contactus'">
+      Contact Us
+    </div>
+  </div>
+</div>
+<div class="homegrid-container">
+  <div class="homeitem1 fullwidth flexbox">
+    <div>
+      <h4 id="hiim" class="hometext"></h4>
+      <h1 id="name" class="hometext"></h1>
+      <div class="flexbox">
+        <h5 id="job" class="hometext"></h5>
+        <div id="typingcursor"></div>
+        <div id="cursor"></div>
+      </div>
+    </div>
+  </div>
+  <div class="homeitem2 fullwidth flexbox">
+    <img src="./img/portfoliopic.png" class="homeimg1" />
+  </div>
+</div>

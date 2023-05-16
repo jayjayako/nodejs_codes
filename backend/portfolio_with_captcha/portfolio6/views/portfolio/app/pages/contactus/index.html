@@ -1,0 +1,111 @@
+<style>
+  .contactusbg {
+    background-color: white;
+  }
+  .contactusgrid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0px;
+    /* margin: 30px; */
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .contactusgrid-container > div {
+    padding: 20px 0;
+  }
+
+  .contactusitem1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .contactusitem2 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .contactusimg1 {
+    width: 200px;
+    height: auto;
+  }
+  .contactusinputtext {
+    height: 90px;
+  }
+  .contactusinput {
+    outline: none;
+    border: none;
+    background-color: rgb(206, 206, 206);
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .contactusbtn1 {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+  }
+  .contactusform {
+    width: 50%;
+  }
+</style>
+<h3
+  style="color: white; text-align: right; margin-right: 20px; margin-top: 20px">
+  Contact Us
+</h3>
+<div class="contactusbg">
+  <div class="contactusgrid-container">
+    <div class="contactusitem1 fullwidth flexbox">
+      <div>
+        <img src="./img/curriculum-vitae.png" class="contactusimg1" />
+      </div>
+    </div>
+    <div class="contactusitem2 fullwidth fullheight flexbox">
+      <form class="contactusform" onsubmit="return false">
+        <div>
+          <input
+            class="contactusinput fullwidth"
+            type="text"
+            placeholder="Your Email"
+            id="emailid" />
+        </div>
+        <br />
+        <div>
+          <textarea
+            class="contactusinputtext contactusinput fullwidth"
+            placeholder="Message"
+            id="messageid"></textarea>
+        </div>
+
+        <div>
+          <button class="contactusbtn1 fullwidth" onclick="sendmessage()">
+            Send
+          </button>
+        </div>
+        <div id="my-container-id" style="height: 90px">
+          <!-- <div
+            class="g-recaptcha"
+            data-sitekey="6Lctb1MlAAAAAPtYRJEsGxxCZPMi_s57CRwUWTVA"></div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div
+    style="
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+      text-align: center;
+      height: 30px;
+    "
+    class="fullwidth flexbox">
+    <h5>© 2023 Arturo All Rights Reserved</h5>
+  </div>
+</footer>

@@ -1,0 +1,36 @@
+@use "../../util";
+.checkbox1 {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  .checkbox__input {
+    display: none;
+  }
+  .checkbox__box {
+    width: 1.1em; // change this
+    height: 1.1em; // change this
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+    &::after {
+      font-size: 12px; // change this
+      content: "\2714";
+      color: #ffffff;
+      transform: scale(0);
+      transition: transform 0.15s;
+    }
+  }
+  .checkbox__input:checked + .checkbox__box {
+    background: util.$blueGreen;
+    border-color: util.$blueGreen;
+  }
+
+  .checkbox__input:checked + .checkbox__box::after {
+    transform: scale(1);
+  }
+}

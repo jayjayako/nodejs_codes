@@ -1,0 +1,121 @@
+/* //////////////////// all fonts imported /////////////////// */
+@font-face {
+  font-family: Telegrafregular;
+  src: url("./fonts/Telegraf Regular 400.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Telegrafultrabold;
+  src: url("./fonts/Telegraf UltraBold 800.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Telegrafultralight;
+  src: url("./fonts/Telegraf UltraLight 200.otf") format("opentype");
+}
+
+@font-face {
+  font-family: CourierPrimeRegular;
+  src: url("./fonts/CourierPrime-Regular.ttf") format("truetype");
+}
+/* /////////////////////////////////////////////////////////// */
+* {
+  font-family: Telegrafregular;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* :root {
+  --white: #ffffff;
+  --black: #5e5e5e;
+  --violet: #833db0;
+  --lightBlue: #e8f3f1;
+  --blueGreen: #57cbb4;
+  --darkGreen: #00392a;
+  --lightViolet: #dcc9e9;
+  --grayViolet: #f6f6f6;
+} */
+
+.fullwidth {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.fullheight {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.flexcontent {
+  display: flex;
+  align-items: center;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockbox {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.imgsizedes10 {
+  width: 10%;
+  height: auto;
+}
+
+.imgsizedes20 {
+  width: 20%;
+  height: auto;
+}
+
+.imgsizedes30 {
+  width: 30%;
+  height: auto;
+}
+
+.imgsizedes40 {
+  width: 40%;
+  height: auto;
+}
+
+.imgsizedes50 {
+  width: 50%;
+  height: auto;
+}
+
+.imgsizedes60 {
+  width: 60%;
+  height: auto;
+}
+
+.imgsizedes70 {
+  width: 70%;
+  height: auto;
+}
+
+.imgsizedes80 {
+  width: 80%;
+  height: auto;
+}
+
+.imgsizedes90 {
+  width: 60%;
+  height: auto;
+}
+
+.imgsizedes100 {
+  width: 100%;
+  height: auto;
+}

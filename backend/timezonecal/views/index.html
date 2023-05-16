@@ -1,0 +1,21 @@
+<script>
+  let clientTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  // Send the client's time zone to the server using a fetch request
+  fetch("/timezone", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      timeZone: clientTimeZone,
+    }),
+  })
+    .then((response) => {
+      console.log("Server response:", response);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+</script>
+heloooo

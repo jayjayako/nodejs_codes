@@ -1,0 +1,25 @@
+<style>
+  .backgroundpage {
+    background-color: black;
+    position: absolute;
+    overflow-y: auto;
+  }
+</style>
+<div class="backgroundpage fullwidth fullheight">
+  <div id="home" class="fullwidth fullheight"></div>
+  <div id="about" class="fullwidth fullheight"></div>
+  <div id="skills" class="fullwidth fullheight"></div>
+  <div id="projects" class="fullwidth fullheight"></div>
+  <div id="resume" class="fullwidth fullheight"></div>
+  <div id="services" class="fullwidth fullheight"></div>
+  <div id="contactus" class="fullwidth fullheight"></div>
+</div>
+<script>
+  includehtml("home", "app/pages/home");
+  includehtml("about", "app/pages/about");
+  includehtml("skills", "app/pages/skills");
+  includehtml("projects", "app/pages/projects");
+  includehtml("resume", "app/pages/resume");
+  includehtml("services", "app/pages/services");
+  includehtml("contactus", "app/pages/contactus");
+</script>

@@ -1,0 +1,60 @@
+/* //////////// input design //////////// */
+.inputtextdes1 {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  transition: 0.5s;
+  background-color: rgb(221, 221, 221);
+
+  &:focus {
+    outline: none;
+    background-color: rgb(230, 220, 220);
+  }
+}
+
+.inputpassdes1 {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  transition: 0.5s;
+  background-color: rgb(221, 221, 221);
+
+  &:focus {
+    outline: none;
+    background-color: rgb(230, 220, 220);
+  }
+}
+
+.inputtextdes2 {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #525252;
+  transition: 0.5s;
+
+  &:focus {
+    border: 1px solid #57cbb4;
+  }
+}
+
+.inputpassdes2 {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #525252;
+  transition: 0.5s;
+
+  &:focus {
+    border: 1px solid #57cbb4;
+  }
+}
+
+/* /////////////////////////////////// */

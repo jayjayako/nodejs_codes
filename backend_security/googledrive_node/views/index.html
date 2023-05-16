@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Simple File Upload</title>
+  </head>
+  <body>
+    <input type="file" id="file1" />
+    <button onclick="uploadfile()" class="button1">Upload the file</button>
+    <script>
+      async function uploadfile() {
+        var fileid = document.getElementById("file1");
+        try {
+          let formData = new FormData();
+          formData.append("file1", fileid.files[0]);
+          const response = await axios.post(
+            "/api/fileupload/upload",
+            formData,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }
+          );
+          if (response.data.data != "success") {
+            alert("Invalid");
+          } else {
+            alert("File Upload Success");
+          }
+        } catch (error) {
+          alert("Error Occured");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chart.js Progress Circle</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <canvas id="progress1" width="80" height="80"></canvas>
+    <canvas id="progress2" width="80" height="80"></canvas>
+
+    <script>
+      function createProgressCircle(canvasId, value, max) {
+        const ctx = document.getElementById(canvasId).getContext("2d");
+        const progress = (value / max) * 100;
+
+        const chart = new Chart(ctx, {
+          type: "doughnut",
+          data: {
+            datasets: [
+              {
+                data: [progress, 100 - progress],
+                backgroundColor: ["blue", "lightgray"],
+              },
+            ],
+          },
+          options: {
+            cutout: 30,
+            responsive: false,
+            animation: {
+              duration: 1000,
+              onProgress: function (animation) {
+                const text = value.toString();
+                let totaltext = text + max.toString();
+                let fontSize = 20;
+                fontSize = fontSize - totaltext.length * 2.5;
+                ctx.font = fontSize + "px Arial";
+                const textWidth = ctx.measureText(text).width * 0.05;
+                const textHeight = fontSize * 0.75;
+                const textX = Math.round((ctx.canvas.width - textWidth) / 2);
+                const textY = Math.round((ctx.canvas.height + textHeight) / 2);
+                ctx.fillStyle = "black";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText(text + "/" + max, textX, textY);
+              },
+            },
+            tooltips: {
+              enabled: false,
+            },
+            legend: {
+              display: false,
+            },
+            elements: {
+              arc: {
+                borderWidth: 0,
+              },
+            },
+          },
+        });
+        // put here the onprogress function if you dont want animation
+      }
+
+      createProgressCircle("progress1", 3, 5);
+      createProgressCircle("progress2", 10, 100);
+    </script>
+  </body>
+</html>

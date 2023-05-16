@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  node1:
+    build:
+      context: ./node1
+    volumes:
+      - "./uploads:/app/uploads"
+      - "./infected:/infected"
+      # - "./clamav/varlib:/var/lib/clamav"
+      # - "./clamav/varlog:/var/log/node-clam"
+      # - "./clamav/usrbinclam:/usr/bin/clam"
+      # - "./clamav/usrbinbetter_clam_db:/usr/bin/better_clam_db"
+      # - "./clamav/varrunclamdscanclamdsock:/var/run/clamd.scan/clamd.sock"
+      # - "./clamav/binclamdscan:/bin/clamdscan"
+      # - "./clamav/etcclamdddaemonconf:/etc/clamd.d/daemon.conf"
+    restart: unless-stopped
+    container_name: node1con
+    ports:
+      - "5000:3000"
+    tty: true
+    networks:
+      - node1avconn
+  clamav:
+    image: clamav/clamav
+    # volumes:
+    #   # - "./infected:/infected"
+    #   # - "./clamav/varlib:/var/lib/clamav"
+    #   # - "./clamav/varlog:/var/log/node-clam"
+    #   # - "./clamav/usrbinclam:/usr/bin/clam"
+    #   # - "./clamav/usrbinbetter_clam_db:/usr/bin/better_clam_db"
+    #   # - "./clamav/varrunclamdscanclamdsock:/var/run/clamd.scan/clamd.sock"
+    #   # - "./clamav/binclamdscan:/bin/clamdscan"
+    #   # - "./clamav/etcclamdddaemonconf:/etc/clamd.d/daemon.conf"
+    networks:
+      - node1avconn
+networks:
+  node1avconn:
+    driver: bridge

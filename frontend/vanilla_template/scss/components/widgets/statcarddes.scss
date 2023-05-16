@@ -1,0 +1,36 @@
+@use "../../util";
+/* //// super admin stats card des //// */
+.spradcarddes {
+  width: 100%;
+  height: 148px;
+  box-shadow: 1px 2px 4px rgb(207, 207, 207);
+  border-radius: 10px;
+}
+.spradcardcountdes {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid util.$blueGreen;
+}
+.spradcardcountdes p {
+  font-size: 28px;
+  font-weight: bold;
+}
+.dropdowndes2 {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  color: util.$violet;
+  outline: none;
+  text-align: right;
+}
+.dropdowndes2 option {
+  color: util.$violet;
+  outline: none;
+  text-align: right;
+}
+.drpdwn2padder {
+  padding: 20px;
+}
+/* /////////////////////////////////// */

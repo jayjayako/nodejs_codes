@@ -1,0 +1,25 @@
+@use "modaltemplate";
+
+.modalbg {
+  @include modaltemplate.modalbgdesign();
+  .modal-content {
+    @include modaltemplate.modalcontentdesign();
+    .modal-header {
+      @include modaltemplate.modalheaderdesign();
+      .close {
+        @include modaltemplate.modalclosedesign();
+      }
+    }
+    .modal-body {
+      @include modaltemplate.modalbodydesign();
+    }
+    .modal-footer {
+      @include modaltemplate.modalfooterdesign();
+    }
+  }
+}
+
+.modalsamplemodal {
+  width: 30%;
+  height: 40%;
+}

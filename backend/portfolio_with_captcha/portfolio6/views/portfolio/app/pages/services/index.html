@@ -1,0 +1,66 @@
+<style>
+  .servicesbg {
+    background-color: white;
+  }
+  .servicesgrid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0px;
+    margin: 30px;
+  }
+
+  .servicesgrid-container > div {
+    padding: 20px 0;
+  }
+
+  .servicesitem1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .servicesitem2 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .servicesimg1 {
+    width: 200px;
+    height: auto;
+  }
+  .servicesimg2 {
+    width: 70px;
+    height: auto;
+  }
+  .serviceslbl {
+    text-align: center;
+  }
+</style>
+<h3 style="color: white; text-align: left; margin-left: 20px; margin-top: 20px">
+  Services
+</h3>
+<div class="servicesbg">
+  <div class="servicesgrid-container">
+    <div class="servicesitem1 fullwidth flexbox">
+      <div class="fullwidth">
+        <div class="fullwidth flexbox">
+          <img src="./img/troubleshooting.png" class="servicesimg2" />
+        </div>
+        <div class="serviceslbl fullwidth flexbox">
+          <p>Computer Troubleshooting</p>
+        </div>
+      </div>
+      <div class="fullwidth">
+        <div class="fullwidth flexbox">
+          <img src="./img/developing.png" class="servicesimg2" />
+        </div>
+        <div class="serviceslbl fullwidth flexbox">
+          <p>Website Developing</p>
+        </div>
+      </div>
+    </div>
+    <div class="servicesitem2 fullwidth flexbox">
+      <div>
+        <img src="./img/about.png" class="servicesimg1" />
+      </div>
+    </div>
+  </div>
+</div>

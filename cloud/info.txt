@@ -1,0 +1,4 @@
+ngrok // for testing
+docker-compose // for microservices with networking
+nginx // for load balancer
+ioredis // for memory storage and pubsub server to server communication

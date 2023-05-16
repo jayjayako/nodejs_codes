@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Google OAuth Login</title>
+  </head>
+  <body>
+    <h1>Google OAuth Login</h1>
+    <p>Click the button below to log in with Google:</p>
+    <button onclick="loginWithGoogle()">Log in with Google</button>
+    <script>
+      async function loginWithGoogle() {
+        try {
+          let response3 = await fetch("/api/oauth/auth/google", {
+            method: "GET",
+          });
+          let myresult3 = await response3.json();
+          window.location.href = myresult3.authurl;
+        } catch (error) {
+          alert(error);
+        }
+      }
+
+      async function checkuser() {
+        const queryParams = new URLSearchParams(window.location.search);
+        const queryObj = Object.fromEntries(queryParams.entries());
+        if (queryObj.code) {
+          try {
+            let response = await fetch(
+              "/api/oauth/checkuser" + window.location.search,
+              {
+                method: "GET",
+              }
+            );
+            let myresult = await response.json();
+            if (myresult.data == "exist") {
+              location.replace("./dashboard");
+            }
+            if (myresult.data == "redirect") {
+              let response2 = await fetch(
+                "/api/oauth/google" + window.location.search,
+                {
+                  method: "GET",
+                }
+              );
+              let myresult2 = await response2.json();
+              if (myresult2.data == "loggedin") {
+                location.replace("./dashboard");
+              }
+            }
+          } catch (error) {
+            alert(error);
+          }
+        } else {
+          let response = await fetch("/api/oauth/checkuser", {
+            method: "GET",
+          });
+          let myresult = await response.json();
+          if (myresult.data == "exist") {
+            location.replace("./dashboard");
+          }
+        }
+      }
+
+      checkuser();
+    </script>
+  </body>
+</html>

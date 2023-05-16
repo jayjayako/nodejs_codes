@@ -1,0 +1,109 @@
+@use "../util";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap");
+html {
+  box-sizing: border-box;
+  font: 100%;
+  font-family: util.$font1;
+}
+
+*:not(ul):not(li) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*::before *::after {
+  box-sizing: inherit;
+}
+
+.defaultpagenone {
+  display: none;
+}
+
+.fullwidth {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.fullheight {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.fullheightvh {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.flexcontent {
+  display: flex;
+  align-items: center;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexdirec-col {
+  flex-direction: column;
+}
+.flexdirec-row {
+  flex-direction: row;
+}
+
+.imgsizedes10 {
+  width: 10%;
+  height: auto;
+}
+
+.imgsizedes20 {
+  width: 20%;
+  height: auto;
+}
+
+.imgsizedes30 {
+  width: 30%;
+  height: auto;
+}
+
+.imgsizedes40 {
+  width: 40%;
+  height: auto;
+}
+
+.imgsizedes50 {
+  width: 50%;
+  height: auto;
+}
+
+.imgsizedes60 {
+  width: 60%;
+  height: auto;
+}
+
+.imgsizedes70 {
+  width: 70%;
+  height: auto;
+}
+
+.imgsizedes80 {
+  width: 80%;
+  height: auto;
+}
+
+.imgsizedes90 {
+  width: 60%;
+  height: auto;
+}
+
+.imgsizedes100 {
+  width: 100%;
+  height: auto;
+}
