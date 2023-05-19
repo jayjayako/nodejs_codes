@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sample infinite scroll</title>
+    <style>
+      /* ////////// table design 2 ///////// */
+      table {
+        border-collapse: collapse;
+      }
+
+      table th {
+        text-align: left;
+      }
+      table th,
+      td {
+        text-align: left;
+        padding: 10px 10px;
+      }
+      .outertbl2 {
+        position: sticky;
+        top: 0;
+        background-color: #57cbb4;
+        color: #ffffff;
+        z-index: 1;
+      }
+      /* /////////////////////////////////// */
+    </style>
+  </head>
+  <body>
+    <br />
+    <div style="width: 200px; overflow-x: auto; border-radius: 10px">
+      <div
+        id="scrollidtbl"
+        style="overflow-y: auto; height: 200px; width: 100%">
+        <table id="table_cont1">
+          <thead class="outertbl2">
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>CONTENT</th>
+            </tr>
+          </thead>
+          <template id="table_tbodytemplate">
+            <tr>
+              <td><div>${results[i].id}</div></td>
+              <td><div>${results[i].name}</div></td>
+              <td><div>${results[i].content}</div></td>
+            </tr>
+          </template>
+          <tbody id="table_tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <br />
+
+    <script>
+      let errortimeout,
+        tableincrement = 0,
+        tablecount = 0,
+        tblstatcount = "init";
+
+      var element = document.getElementById("scrollidtbl");
+      element.addEventListener("scroll", async function (event) {
+        var element = event.target;
+        if (element.scrollTop === 0) {
+          if (tableincrement > 0) {
+            tblstatcount = "decrement";
+            await displaytable();
+          }
+        }
+
+        if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+          if (tableincrement < tablecount) {
+            tblstatcount = "increment";
+            await displaytable();
+          }
+        }
+      });
+
+      element.addEventListener("wheel", async function (event) {
+        var element = event.target;
+        if (event.deltaY < 0 && element.scrollTop === 0) {
+          if (tableincrement > 0) {
+            tblstatcount = "decrement";
+            await displaytable();
+          }
+        }
+
+        if (
+          event.deltaY > 0 &&
+          element.scrollHeight - element.scrollTop === element.clientHeight
+        ) {
+          if (tableincrement < tablecount) {
+            tblstatcount = "increment";
+            await displaytable();
+          }
+        }
+      });
+
+      async function displaytable() {
+        let disableincrement = true;
+        if (tableincrement < 0) {
+          tableincrement = 0;
+        }
+        try {
+          let response = await fetch(
+            `/api/getdata/displaytable/${tableincrement}/${tblstatcount}`,
+            {
+              method: "GET",
+            }
+          );
+          let myresult = await response.json();
+          if (disableincrement) {
+            if (myresult.tablestatcount == "increment") {
+              tableincrement += 1;
+            }
+            if (myresult.tablestatcount == "decrement") {
+              tableincrement -= 1;
+            }
+          }
+          if (myresult.status == "success") {
+            let output = "";
+            let results = myresult.allresults;
+            tablecount = myresult.tablecount;
+            let value = document.getElementById(
+              "table_tbodytemplate"
+            ).innerHTML;
+            if (results.length != 0) {
+              disableincrement = true;
+              for (let i in results) {
+                output += eval("`" + value + "`");
+              }
+              document.getElementById("table_tbody").innerHTML = output;
+            } else {
+              disableincrement = false;
+              tableincrement = 1;
+            }
+          } else {
+            alert("Error");
+          }
+          errortimeout = 0;
+        } catch (error) {
+          errortimeout += 1;
+          if (errortimeout >= 5) {
+            alert("Oops! Network Error!");
+          } else {
+            errortimeout = 0;
+            setTimeout(displaytable, 1000);
+          }
+        }
+      }
+
+      displaytable();
+    </script>
+  </body>
+</html>
